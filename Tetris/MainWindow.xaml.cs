@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Tetris
 {
@@ -22,6 +23,7 @@ namespace Tetris
     {
         private const int GAMESPEED = 700;// millisecond
         List<System.Media.SoundPlayer> soundList = new List<System.Media.SoundPlayer>();
+        DispatcherTimer timer;
 
         public MainWindow()
         {
