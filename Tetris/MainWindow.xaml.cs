@@ -120,6 +120,9 @@ namespace Tetris
         public int[,] J_Tetromino_0 = new int[2, 3] {{1,0,0},    // * 
                                                      {1,1,1}};   // * * *
 
+        public int[,] J_Tetromino_90 = new int[3, 2] {{1,1},     // * * 
+                                                      {1,0},     // *
+                                                      {1,0}};    // * 
 
         public MainWindow()
         {
