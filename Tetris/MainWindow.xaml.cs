@@ -35,6 +35,7 @@ namespace Tetris
         private int nextShapeNumber;
         private int tetrisGridColumn;
         private int tetrisGridRow;
+        private int rotation = 0;
 
 
 
