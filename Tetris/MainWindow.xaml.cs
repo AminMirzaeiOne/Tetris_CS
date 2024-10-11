@@ -21,6 +21,7 @@ namespace Tetris
     public partial class MainWindow : Window
     {
         private const int GAMESPEED = 700;// millisecond
+        List<System.Media.SoundPlayer> soundList = new List<System.Media.SoundPlayer>();
 
         public MainWindow()
         {
