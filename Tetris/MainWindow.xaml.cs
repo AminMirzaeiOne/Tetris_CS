@@ -116,6 +116,11 @@ namespace Tetris
                                                       {1,1},     // * *
                                                       {1,0}};    // *
 
+        //---- J Tetromino------------
+        public int[,] J_Tetromino_0 = new int[2, 3] {{1,0,0},    // * 
+                                                     {1,1,1}};   // * * *
+
+
         public MainWindow()
         {
             InitializeComponent();
