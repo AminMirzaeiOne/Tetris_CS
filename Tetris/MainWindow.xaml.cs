@@ -38,6 +38,7 @@ namespace Tetris
         private int rotation = 0;
         private bool gameActive = false;
         private bool nextShapeDrawed = false;
+        private int[,] currentTetromino = null;
 
 
 
