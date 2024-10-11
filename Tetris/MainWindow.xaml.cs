@@ -73,6 +73,11 @@ namespace Tetris
                                         "L_Tetromino_0"
                                    };
 
+        // arrays of tetromino shape
+        //---- O Tetromino------------
+        public int[,] O_Tetromino = new int[2, 2] { { 1, 1 },  // * *
+                                                    { 1, 1 }}; // * *
+
 
         public MainWindow()
         {
