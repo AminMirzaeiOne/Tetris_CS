@@ -41,6 +41,7 @@ namespace Tetris
         private int[,] currentTetromino = null;
         private bool isRotated = false;
         private bool bottomCollided = false;
+        private bool leftCollided = false;
 
 
 
