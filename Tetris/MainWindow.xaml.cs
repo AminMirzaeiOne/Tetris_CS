@@ -40,6 +40,7 @@ namespace Tetris
         private bool nextShapeDrawed = false;
         private int[,] currentTetromino = null;
         private bool isRotated = false;
+        private bool bottomCollided = false;
 
 
 
