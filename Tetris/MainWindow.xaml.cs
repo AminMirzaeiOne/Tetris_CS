@@ -25,6 +25,8 @@ namespace Tetris
         List<System.Media.SoundPlayer> soundList = new List<System.Media.SoundPlayer>();
         DispatcherTimer timer;
         Random shapeRandom;
+        private int rowCount = 0;
+
 
 
         public MainWindow()
