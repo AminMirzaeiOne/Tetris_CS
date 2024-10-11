@@ -49,7 +49,13 @@ namespace Tetris
         private double gameSpeedCounter = 0;
         private int gameLevel = 1;
         private int gameScore = 0;
-
+        private static Color O_TetrominoColor = Colors.GreenYellow;
+        private static Color I_TetrominoColor = Colors.Red;
+        private static Color T_TetrominoColor = Colors.Gold;
+        private static Color S_TetrominoColor = Colors.Violet;
+        private static Color Z_TetrominoColor = Colors.DeepSkyBlue;
+        private static Color J_TetrominoColor = Colors.Cyan;
+        private static Color L_TetrominoColor = Colors.LightSeaGreen;
 
 
 
