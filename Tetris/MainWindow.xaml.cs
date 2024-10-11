@@ -46,6 +46,7 @@ namespace Tetris
         private bool isGameOver = false;
         private int gameSpeed;
         private int levelScale = 60;// every 60 second increase level by 1 until 10
+        private double gameSpeedCounter = 0;
 
 
 
