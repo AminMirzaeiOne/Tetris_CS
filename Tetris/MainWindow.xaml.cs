@@ -27,6 +27,7 @@ namespace Tetris
         Random shapeRandom;
         private int rowCount = 0;
         private int columnCount = 0;
+        private int leftPos = 0;
 
 
 
