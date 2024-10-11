@@ -124,6 +124,9 @@ namespace Tetris
                                                       {1,0},     // *
                                                       {1,0}};    // * 
 
+        public int[,] J_Tetromino_180 = new int[2, 3] {{1,1,1},  // * * * 
+                                                       {0,0,1}}; //     *
+
         public MainWindow()
         {
             InitializeComponent();
