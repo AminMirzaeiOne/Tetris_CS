@@ -108,6 +108,9 @@ namespace Tetris
                                                       {1,1},     // * *
                                                       {0,1}};    //   *
 
+        //---- Z Tetromino------------
+        public int[,] Z_Tetromino_0 = new int[2, 3] {{1,1,0},    // * *
+                                                     {0,1,1}};   //   * *
 
 
         public MainWindow()
