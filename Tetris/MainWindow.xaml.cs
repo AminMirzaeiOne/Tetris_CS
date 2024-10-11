@@ -85,7 +85,9 @@ namespace Tetris
                                                        { 1,0 },  // *
                                                        { 1,0 },  // *
                                                        { 1,0 }}; // *
-
+        //---- T Tetromino------------
+        public int[,] T_Tetromino_0 = new int[2, 3] {{0,1,0},    //    * 
+                                                     {1,1,1}};   //  * * *
 
         public MainWindow()
         {
