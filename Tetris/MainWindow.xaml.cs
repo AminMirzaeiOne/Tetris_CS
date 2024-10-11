@@ -59,6 +59,12 @@ namespace Tetris
         List<int> currentTetrominoRow = null;
         List<int> currentTetrominoColumn = null;
 
+        // Color for shape tetromino
+        Color[] shapeColor = {  O_TetrominoColor,I_TetrominoColor,
+                                T_TetrominoColor,S_TetrominoColor,
+                                Z_TetrominoColor,J_TetrominoColor,
+                                L_TetrominoColor
+                             };
 
 
         public MainWindow()
