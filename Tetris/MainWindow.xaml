@@ -16,6 +16,9 @@
     </Window.Background>
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="352*"/>
+        </Grid.ColumnDefinitions>
     </Grid>
 </Window>
