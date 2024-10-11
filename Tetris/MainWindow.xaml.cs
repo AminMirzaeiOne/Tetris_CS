@@ -26,6 +26,7 @@ namespace Tetris
         DispatcherTimer timer;
         Random shapeRandom;
         private int rowCount = 0;
+        private int columnCount = 0;
 
 
 
