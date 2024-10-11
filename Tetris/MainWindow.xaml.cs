@@ -44,6 +44,7 @@ namespace Tetris
         private bool leftCollided = false;
         private bool rightCollided = false;
         private bool isGameOver = false;
+        private int gameSpeed;
 
 
 
