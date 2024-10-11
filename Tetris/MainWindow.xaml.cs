@@ -42,6 +42,7 @@ namespace Tetris
         private bool isRotated = false;
         private bool bottomCollided = false;
         private bool leftCollided = false;
+        private bool rightCollided = false;
 
 
 
