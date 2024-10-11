@@ -32,6 +32,7 @@ namespace Tetris
         private int currentTetrominoWidth;
         private int currentTetrominoHeigth;
         private int currentShapeNumber;
+        private int nextShapeNumber;
 
 
 
