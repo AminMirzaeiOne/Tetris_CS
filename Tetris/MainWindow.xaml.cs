@@ -131,6 +131,10 @@ namespace Tetris
                                                        {0,1},    //   *
                                                        {1,1 }};  // * *
 
+        //---- L Tetromino------------
+        public int[,] L_Tetromino_0 = new int[2, 3] {{0,0,1},    //     * 
+                                                     {1,1,1}};   // * * *
+
         public MainWindow()
         {
             InitializeComponent();
