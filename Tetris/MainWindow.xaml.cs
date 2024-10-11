@@ -57,6 +57,7 @@ namespace Tetris
         private static Color J_TetrominoColor = Colors.Cyan;
         private static Color L_TetrominoColor = Colors.LightSeaGreen;
         List<int> currentTetrominoRow = null;
+        List<int> currentTetrominoColumn = null;
 
 
 
