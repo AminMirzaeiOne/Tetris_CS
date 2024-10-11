@@ -152,6 +152,22 @@ namespace Tetris
         public MainWindow()
         {
             InitializeComponent();
+            gameSpeed = GAMESPEED;
+            //created event for key press
+            KeyDown += MainWindow_KeyDown;
+            // init timer
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 0, 0, gameSpeed); // 700 millisecond
+            timer.Tick += Timer_Tick;
+            tetrisGridColumn = tetrisGrid.ColumnDefinitions.Count;
+            tetrisGridRow = tetrisGrid.RowDefinitions.Count;
+            shapeRandom = new Random();
+            currentShapeNumber = shapeRandom.Next(1, 8);
+            nextShapeNumber = shapeRandom.Next(1, 8);
+            nextTxt.Visibility = levelTxt.Visibility = GameOverTxt.Visibility = Visibility.Collapsed;
+            // Add the 2 wav sound in list
+            soundList.Add(new System.Media.SoundPlayer(Properties.Resources.collided));
+            soundList.Add(new System.Media.SoundPlayer(Properties.Resources.deleteLine));
         }
     }
 }
