@@ -30,6 +30,7 @@ namespace Tetris
         private int leftPos = 0;
         private int downPos = 0;
         private int currentTetrominoWidth;
+        private int currentTetrominoHeigth;
 
 
 
