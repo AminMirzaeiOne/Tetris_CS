@@ -29,6 +29,7 @@ namespace Tetris
         private int columnCount = 0;
         private int leftPos = 0;
         private int downPos = 0;
+        private int currentTetrominoWidth;
 
 
 
