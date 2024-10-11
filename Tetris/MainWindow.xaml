@@ -57,8 +57,9 @@
         <Button x:Name="startStopBtn" Content="Start Game" HorizontalAlignment="Left" Margin="232,369,0,0" VerticalAlignment="Top" Width="93"  Click="Button_Click_1" Height="50" Grid.Column="1"/>
         <Rectangle x:Name="back" HorizontalAlignment="Left" Height="405" Margin="26,15,0,0" VerticalAlignment="Top" Width="254" Fill="White" Grid.ColumnSpan="2"/>
         <Canvas x:Name="nextShapeCanvas" HorizontalAlignment="Left" Height="75" Margin="235,94,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <Label x:Name="nextTxt" Content="NEXT" HorizontalAlignment="Left" Margin="175,93,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold" FontFamily="Showcard Gothic" Background="{x:Null}" Grid.Column="1"/>
 
-        
+
 
     </Grid>
 </Window>
