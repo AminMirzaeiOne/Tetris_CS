@@ -146,6 +146,9 @@ namespace Tetris
                                                        {0,1},    //   *
                                                        {0,1 }};  //   *
 
+        public object Task { get; private set; }
+
+
         public MainWindow()
         {
             InitializeComponent();
