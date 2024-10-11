@@ -34,6 +34,7 @@ namespace Tetris
         private int currentShapeNumber;
         private int nextShapeNumber;
         private int tetrisGridColumn;
+        private int tetrisGridRow;
 
 
 
