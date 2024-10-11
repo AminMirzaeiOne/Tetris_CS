@@ -81,6 +81,12 @@ namespace Tetris
         //---- I Tetromino------------
         public int[,] I_Tetromino_0 = new int[2, 4] { { 1, 1, 1, 1 }, { 0, 0, 0, 0 } };// * * * *
 
+        public int[,] I_Tetromino_90 = new int[4, 2] {{ 1,0 },   // *  
+                                                       { 1,0 },  // *
+                                                       { 1,0 },  // *
+                                                       { 1,0 }}; // *
+
+
         public MainWindow()
         {
             InitializeComponent();
