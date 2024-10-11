@@ -37,6 +37,7 @@ namespace Tetris
         private int tetrisGridRow;
         private int rotation = 0;
         private bool gameActive = false;
+        private bool nextShapeDrawed = false;
 
 
 
