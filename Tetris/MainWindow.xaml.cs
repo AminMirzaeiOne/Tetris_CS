@@ -66,6 +66,13 @@ namespace Tetris
                                 L_TetrominoColor
                              };
 
+        // ---------
+        string[] arrayTetrominos = { "","O_Tetromino" , "I_Tetromino_0",
+                                        "T_Tetromino_0","S_Tetromino_0",
+                                        "Z_Tetromino_0","J_Tetromino_0",
+                                        "L_Tetromino_0"
+                                   };
+
 
         public MainWindow()
         {
