@@ -166,8 +166,10 @@ namespace Tetris
             nextShapeNumber = shapeRandom.Next(1, 8);
             nextTxt.Visibility = levelTxt.Visibility = GameOverTxt.Visibility = Visibility.Collapsed;
             // Add the 2 wav sound in list
-            soundList.Add(new System.Media.SoundPlayer(Properties.Resources.collided));
-            soundList.Add(new System.Media.SoundPlayer(Properties.Resources.deleteLine));
+            System.IO.MemoryStream stream1 = new System.IO.MemoryStream(Properties.Resources.collided);
+            System.IO.MemoryStream stream2 = new System.IO.MemoryStream(Properties.Resources.deleteLine);
+            soundList.Add(new System.Media.SoundPlayer(stream1));
+            soundList.Add(new System.Media.SoundPlayer(stream2));
         }
 
         // Key event method for moving shape down,rigth,left and rotation
