@@ -600,6 +600,27 @@ namespace Tetris
 
         }
 
+        // Remove shape from grid   
+        private void removeShape()
+        {
+            int index = 0;
+            while (index < tetrisGrid.Children.Count)
+            {
+                UIElement element = tetrisGrid.Children[index];
+                if (element is Rectangle)
+                {
+                    Rectangle square = (Rectangle)element;
+                    if (square.Name.IndexOf("moving_") == 0)
+                    {
+                        tetrisGrid.Children.Remove(element);
+                        index = -1;
+                    }
+                }
+                index++;
+            }
+
+        }
+
 
     }
 }
