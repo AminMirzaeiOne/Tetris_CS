@@ -23,4 +23,5 @@ Simple Tetris game built in WPF<br />
 
 <h2>📷 Screenshots</h2>
 https://github.com/user-attachments/assets/38571df1-c940-4ec5-ad29-1c647fed0156
+![Screenshot 2024-10-12 081326](https://github.com/user-attachments/assets/8f686fb5-797c-427a-a783-3ee4235d77c1)
 
