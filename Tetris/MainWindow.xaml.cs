@@ -455,6 +455,41 @@ namespace Tetris
             nextShapeDrawed = true;
         }
 
+        // This method called when shape it arrives at the bottom or collided
+        private void shapeStoped()
+        {
+            timer.Stop();
+            playSound(0);
+            // Game over condition
+            if (downPos <= 2)
+            {
+                gameOver();
+                return;
+            }
+
+            int index = 0;
+            while (index < tetrisGrid.Children.Count)
+            {
+                UIElement element = tetrisGrid.Children[index];
+                if (element is Rectangle)
+                {
+                    Rectangle square = (Rectangle)element;
+                    if (square.Name.IndexOf("moving_") == 0)
+                    {
+                        // Replace the name of squares arrived tetromino
+                        string newName = square.Name.Replace("moving_", "arrived_");
+                        square.Name = newName;
+                    }
+                }
+                index++;
+            }
+            // Check if line  is complete  and descend down the other shapes
+            checkComplete();
+            reset();
+            timer.Start();
+
+        }
+
 
     }
 }
