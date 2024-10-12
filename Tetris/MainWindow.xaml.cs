@@ -577,6 +577,29 @@ namespace Tetris
             rightCollided = false;
         }
 
+        // The game over reset
+        private void gameOver()
+        {
+            isGameOver = true;
+            reset();
+            startStopBtn.Content = "Start Game";
+            GameOverTxt.Visibility = Visibility.Visible;
+            rowCount = 0;
+            columnCount = 0;
+            leftPos = 0;
+            gameSpeedCounter = 0;
+            gameSpeed = GAMESPEED;
+            gameLevel = 1;
+            gameActive = false;
+            gameScore = 0;
+            nextShapeDrawed = false;
+            currentTetromino = null;
+            currentShapeNumber = shapeRandom.Next(1, 8);
+            nextShapeNumber = shapeRandom.Next(1, 8);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, gameSpeed);
+
+        }
+
 
     }
 }
