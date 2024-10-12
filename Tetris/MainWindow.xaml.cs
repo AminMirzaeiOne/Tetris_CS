@@ -664,6 +664,10 @@ namespace Tetris
             soundList[index].Play();
         }
 
-
+        private void btnDeveloper_Click(object sender, RoutedEventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
     }
 }

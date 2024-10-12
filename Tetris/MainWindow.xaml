@@ -65,7 +65,7 @@
         <TextBlock x:Name="levelTxt" HorizontalAlignment="Left" Margin="183.333,211,0,0" TextWrapping="Wrap" Text="Level:" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="156.667" FontFamily="Showcard Gothic" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="176,15,0,0" TextWrapping="Wrap" Text="Score" VerticalAlignment="Top" Height="35" Width="166" Foreground="#FFFFF161" FontSize="24" FontFamily="Showcard Gothic" TextAlignment="Center" Background="Black" Grid.Column="1"/>
         <TextBlock x:Name="scoreTxt" HorizontalAlignment="Left" Margin="176,49.665,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="166" Foreground="#FFFFF161" FontSize="24" FontFamily="Showcard Gothic" TextAlignment="Center" Background="Black" Text="0" Grid.Column="1"/>
-        <Button x:Name="btnDeveloper" Content="Developer" HorizontalAlignment="Left" Margin="294,370,0,0" VerticalAlignment="Top" Width="93" Height="50" Grid.Column="1"/>
+        <Button x:Name="btnDeveloper" Content="Developer" HorizontalAlignment="Left" Margin="294,370,0,0" VerticalAlignment="Top" Width="93" Height="50" Grid.Column="1" Click="btnDeveloper_Click"/>
 
 
 
