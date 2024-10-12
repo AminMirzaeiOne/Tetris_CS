@@ -424,6 +424,37 @@ namespace Tetris
             return false;
         }
 
+        // Draw next shape tetromino in nextShapeCanvas 
+        private void drawNextShape(int shapeNumber)
+        {
+            nextShapeCanvas.Children.Clear();
+            int[,] nextShapeTetromino = null;
+            nextShapeTetromino = getVariableByString(arrayTetrominos[shapeNumber]);
+            int firstDim = nextShapeTetromino.GetLength(0);
+            int secondDim = nextShapeTetromino.GetLength(1);
+            int x = 0;
+            int y = 0;
+            Rectangle square;
+            for (int row = 0; row < firstDim; row++)
+            {
+                for (int column = 0; column < secondDim; column++)
+                {
+                    int bit = nextShapeTetromino[row, column];
+                    if (bit == 1)
+                    {
+                        square = getBasicSquare(shapeColor[shapeNumber - 1]);
+                        nextShapeCanvas.Children.Add(square);
+                        Canvas.SetLeft(square, x);
+                        Canvas.SetTop(square, y);
+                    }
+                    x += 25;
+                }
+                x = 0;
+                y += 25;
+            }
+            nextShapeDrawed = true;
+        }
+
 
     }
 }
