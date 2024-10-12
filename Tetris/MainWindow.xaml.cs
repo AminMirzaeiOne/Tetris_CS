@@ -395,6 +395,35 @@ namespace Tetris
             rightCollided = checkCollided(1, 0);
         }
 
+        //Check collided
+        private bool checkCollided(int _leftRightOffset, int _bottomOffset)
+        {
+            Rectangle movingSquare;
+            int squareRow = 0;
+            int squareColumn = 0;
+            for (int i = 0; i <= 3; i++)
+            {
+                squareRow = currentTetrominoRow[i];
+                squareColumn = currentTetrominoColumn[i];
+                try
+                {
+                    movingSquare = (Rectangle)tetrisGrid.Children
+                    .Cast<UIElement>()
+                    .FirstOrDefault(e => Grid.GetRow(e) == squareRow + _bottomOffset && Grid.GetColumn(e) == squareColumn + _leftRightOffset);
+                    if (movingSquare != null)
+                    {
+                        if (movingSquare.Name.IndexOf("arrived") == 0)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                catch { }
+            }
+            if (downPos > (tetrisGridRow - currentTetrominoHeigth)) { return true; }
+            return false;
+        }
+
 
     }
 }
