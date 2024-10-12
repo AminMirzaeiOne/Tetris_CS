@@ -247,7 +247,28 @@ namespace Tetris
             addShape(currentShapeNumber, leftPos, downPos);
         }
 
+        // Timer tick method for moving shape down
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            downPos++;
+            moveShape();
+            if (gameSpeedCounter >= levelScale)
+            {
+                if (gameSpeed >= 50)
+                {
+                    gameSpeed -= 50;
+                    gameLevel++;
+                    levelTxt.Text = "Level: " + gameLevel.ToString();
+                }
+                else { gameSpeed = 50; }
+                timer.Stop();
+                timer.Interval = new TimeSpan(0, 0, 0, 0, gameSpeed);
+                timer.Start();
+                gameSpeedCounter = 0;
+            }
+            gameSpeedCounter += (gameSpeed / 1000f);
 
+        }
 
 
     }
