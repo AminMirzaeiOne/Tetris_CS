@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:Tetris"
         mc:Ignorable="d"
         Title="About" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#37d5d6" Offset="0"/>
+            <GradientStop Color="#36096d" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         
     </Grid>
