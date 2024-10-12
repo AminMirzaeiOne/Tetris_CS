@@ -525,6 +525,34 @@ namespace Tetris
             }
         }
 
+        // Delete complete square line
+        private void deleteLine(int row)
+        {
+            // Delete complete line
+            for (int i = 0; i < tetrisGrid.ColumnDefinitions.Count; i++)
+            {
+                Rectangle square;
+                try
+                {
+                    square = (Rectangle)tetrisGrid.Children
+                   .Cast<UIElement>()
+                   .FirstOrDefault(e => Grid.GetRow(e) == row && Grid.GetColumn(e) == i);
+                    tetrisGrid.Children.Remove(square);
+                }
+                catch { }
+
+            }
+            // Move down the rest shape
+            foreach (UIElement element in tetrisGrid.Children)
+            {
+                Rectangle square = (Rectangle)element;
+                if (square.Name.IndexOf("arrived") == 0 && Grid.GetRow(square) <= row)
+                {
+                    Grid.SetRow(square, Grid.GetRow(square) + 1);
+                }
+            }
+        }
+
 
     }
 }
