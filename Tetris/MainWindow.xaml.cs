@@ -376,6 +376,17 @@ namespace Tetris
             addShape(currentShapeNumber, leftPos, downPos);
         }
 
+        // Check collided if rotated tetromino 
+        private bool rotationCollided(int _rotation)
+        {
+            if (checkCollided(0, currentTetrominoWidth - 1)) { return true; }//Bottom collision 
+            else if (checkCollided(0, -(currentTetrominoWidth - 1))) { return true; }// Top collision
+            else if (checkCollided(0, -1)) { return true; }// Top collision
+            else if (checkCollided(-1, currentTetrominoWidth - 1)) { return true; }// Left collision
+            else if (checkCollided(1, currentTetrominoWidth - 1)) { return true; }// Right collision
+            return false;
+        }
+
 
     }
 }
