@@ -490,6 +490,41 @@ namespace Tetris
 
         }
 
+        // Method for check if complete line
+        private void checkComplete()
+        {
+            int gridRow = tetrisGrid.RowDefinitions.Count;
+            int gridColumn = tetrisGrid.ColumnDefinitions.Count;
+            int squareCount = 0;
+            for (int row = gridRow; row >= 0; row--)
+            {
+                squareCount = 0;
+                for (int column = gridColumn; column >= 0; column--)
+                {
+                    Rectangle square;
+                    square = (Rectangle)tetrisGrid.Children
+                   .Cast<UIElement>()
+                   .FirstOrDefault(e => Grid.GetRow(e) == row && Grid.GetColumn(e) == column);
+                    if (square != null)
+                    {
+                        if (square.Name.IndexOf("arrived") == 0)
+                        {
+                            squareCount++;
+                        }
+                    }
+                }
+
+                // If squareCount == gridColumn this means tha the line is completed and must to be delete
+                if (squareCount == gridColumn)
+                {
+                    playSound(1);
+                    deleteLine(row);
+                    scoreTxt.Text = getScore().ToString();
+                    checkComplete();
+                }
+            }
+        }
+
 
     }
 }
