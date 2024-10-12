@@ -354,6 +354,28 @@ namespace Tetris
             }
         }
 
+        // Add new shape in new location
+        private void moveShape()
+        {
+            leftCollided = false;
+            rightCollided = false;
+
+            // Check if collided
+            TetroCollided();
+            if (leftPos > (tetrisGridColumn - currentTetrominoWidth))
+            {
+                leftPos = (tetrisGridColumn - currentTetrominoWidth);
+            }
+            else if (leftPos < 0) { leftPos = 0; }
+
+            if (bottomCollided)
+            {
+                shapeStoped();
+                return;
+            }
+            addShape(currentShapeNumber, leftPos, downPos);
+        }
+
 
     }
 }
