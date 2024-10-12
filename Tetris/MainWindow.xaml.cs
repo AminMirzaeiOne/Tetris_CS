@@ -297,6 +297,63 @@ namespace Tetris
             }
         }
 
+        // Add new shape tetromino in grid
+        private void addShape(int shapeNumber, int _left = 0, int _down = 0)
+        {
+            // Remove previous position of tetromino
+            removeShape();
+            currentTetrominoRow = new List<int>();
+            currentTetrominoColumn = new List<int>();
+            Rectangle square = null;
+            if (!isRotated)
+            {
+                currentTetromino = null;
+                currentTetromino = getVariableByString(arrayTetrominos[shapeNumber].ToString());
+            }
+            int firstDim = currentTetromino.GetLength(0);
+            int secondDim = currentTetromino.GetLength(1);
+            currentTetrominoWidth = secondDim;
+            currentTetrominoHeigth = firstDim;
+            // This is only for I Tetromino
+            if (currentTetromino == I_Tetromino_90)
+            {
+                currentTetrominoWidth = 1;
+            }
+            else if (currentTetromino == I_Tetromino_0) { currentTetrominoHeigth = 1; }
+            //------------------------------------
+            for (int row = 0; row < firstDim; row++)
+            {
+                for (int column = 0; column < secondDim; column++)
+                {
+                    int bit = currentTetromino[row, column];
+                    if (bit == 1)
+                    {
+                        square = getBasicSquare(shapeColor[shapeNumber - 1]);
+                        tetrisGrid.Children.Add(square);
+                        square.Name = "moving_" + Grid.GetRow(square) + "_" + Grid.GetColumn(square);
+                        if (_down >= tetrisGrid.RowDefinitions.Count - currentTetrominoHeigth)
+                        {
+                            _down = tetrisGrid.RowDefinitions.Count - currentTetrominoHeigth;
+                        }
+                        Grid.SetRow(square, rowCount + _down);
+                        Grid.SetColumn(square, columnCount + _left);
+                        currentTetrominoRow.Add(rowCount + _down);
+                        currentTetrominoColumn.Add(columnCount + _left);
+
+                    }
+                    columnCount++;
+                }
+                columnCount = 0;
+                rowCount++;
+            }
+            columnCount = 0;
+            rowCount = 0;
+            if (!nextShapeDrawed)
+            {
+                drawNextShape(nextShapeNumber);
+            }
+        }
+
 
     }
 }
