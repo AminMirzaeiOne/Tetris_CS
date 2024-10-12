@@ -621,6 +621,18 @@ namespace Tetris
 
         }
 
+        // Created the basic square for tetris shape
+        private Rectangle getBasicSquare(Color rectColor)
+        {
+            Rectangle rectangle = new Rectangle();
+            rectangle.Width = 25;
+            rectangle.Height = 25;
+            rectangle.StrokeThickness = 1;
+            rectangle.Stroke = Brushes.White;
+            rectangle.Fill = getGradientColor(rectColor);
+            return rectangle;
+        }
+
 
     }
 }
