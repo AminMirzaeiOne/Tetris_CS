@@ -387,6 +387,14 @@ namespace Tetris
             return false;
         }
 
+        // Check if collided in sides , bottom and other shapes 
+        private void TetroCollided()
+        {
+            bottomCollided = checkCollided(0, 1);
+            leftCollided = checkCollided(-1, 0);
+            rightCollided = checkCollided(1, 0);
+        }
+
 
     }
 }
