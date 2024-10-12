@@ -656,6 +656,12 @@ namespace Tetris
             return (int[,])this.GetType().GetField(variable).GetValue(this);
         }
 
+        // Play sound. index=0 is for collided.wav and index=1 for deleteLine.wav
+        private void playSound(int index)
+        {
+            soundList[index].Play();
+        }
+
 
     }
 }
