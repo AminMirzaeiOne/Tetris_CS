@@ -553,6 +553,13 @@ namespace Tetris
             }
         }
 
+        // Get the score
+        private int getScore()
+        {
+            gameScore += 50 * gameLevel;
+            return gameScore;
+        }
+
 
     }
 }
