@@ -201,6 +201,52 @@ namespace Tetris
             moveShape();
         }
 
+        // Rotation tetrominos 
+        private void shapeRotation(int _rotation)
+        {
+            // Check if collided
+            if (rotationCollided(rotation))
+            {
+                rotation -= 90;
+                return;
+            }
+
+            if (arrayTetrominos[currentShapeNumber].IndexOf("I_") == 0)
+            {
+                if (_rotation > 90) { _rotation = rotation = 0; }
+                currentTetromino = getVariableByString("I_Tetromino_" + _rotation);
+            }
+            else if (arrayTetrominos[currentShapeNumber].IndexOf("T_") == 0)
+            {
+                currentTetromino = getVariableByString("T_Tetromino_" + _rotation);
+            }
+            else if (arrayTetrominos[currentShapeNumber].IndexOf("S_") == 0)
+            {
+                if (_rotation > 90) { _rotation = rotation = 0; }
+                currentTetromino = getVariableByString("S_Tetromino_" + _rotation);
+            }
+            else if (arrayTetrominos[currentShapeNumber].IndexOf("Z_") == 0)
+            {
+                if (_rotation > 90) { _rotation = rotation = 0; }
+                currentTetromino = getVariableByString("Z_Tetromino_" + _rotation);
+            }
+            else if (arrayTetrominos[currentShapeNumber].IndexOf("J_") == 0)
+            {
+                currentTetromino = getVariableByString("J_Tetromino_" + _rotation);
+            }
+            else if (arrayTetrominos[currentShapeNumber].IndexOf("L_") == 0)
+            {
+                currentTetromino = getVariableByString("L_Tetromino_" + _rotation);
+            }
+            else if (arrayTetrominos[currentShapeNumber].IndexOf("O_") == 0) // Do not rotate this
+            {
+                return;
+            }
+
+            isRotated = true;
+            addShape(currentShapeNumber, leftPos, downPos);
+        }
+
 
 
 
