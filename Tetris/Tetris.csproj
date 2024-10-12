@@ -101,6 +101,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="AminMirzaei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="InstagramIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GithubIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
