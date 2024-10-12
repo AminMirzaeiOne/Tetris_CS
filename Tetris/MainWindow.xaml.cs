@@ -650,6 +650,12 @@ namespace Tetris
             return gradientColor;
         }
 
+        // Access variable by string name
+        private int[,] getVariableByString(string variable)
+        {
+            return (int[,])this.GetType().GetField(variable).GetValue(this);
+        }
+
 
     }
 }
