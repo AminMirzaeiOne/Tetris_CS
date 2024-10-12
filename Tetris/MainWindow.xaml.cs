@@ -169,5 +169,40 @@ namespace Tetris
             soundList.Add(new System.Media.SoundPlayer(Properties.Resources.collided));
             soundList.Add(new System.Media.SoundPlayer(Properties.Resources.deleteLine));
         }
+
+        // Key event method for moving shape down,rigth,left and rotation
+        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (!timer.IsEnabled) { return; }
+            switch (e.Key.ToString())
+            {
+                case "Up":
+                    rotation += 90;
+                    if (rotation > 270) { rotation = 0; }
+                    shapeRotation(rotation);
+                    break;
+                case "Down":
+                    downPos++;
+                    break;
+                case "Right":
+                    // Check if collided
+                    TetroCollided();
+                    if (!rightCollided) { leftPos++; }
+                    rightCollided = false;
+                    break;
+                case "Left":
+                    // Check if collided
+                    TetroCollided();
+                    if (!leftCollided) { leftPos--; }
+                    leftCollided = false;
+                    break;
+            }
+            moveShape();
+        }
+
+
+
+
     }
 }
