@@ -560,6 +560,23 @@ namespace Tetris
             return gameScore;
         }
 
+        // Some reset
+        private void reset()
+        {
+            downPos = 0;
+            leftPos = 3;
+            isRotated = false;
+            rotation = 0;
+            currentShapeNumber = nextShapeNumber;
+            if (!isGameOver) { addShape(currentShapeNumber, leftPos); }
+            nextShapeDrawed = false;
+            shapeRandom = new Random();
+            nextShapeNumber = shapeRandom.Next(1, 8);
+            bottomCollided = false;
+            leftCollided = false;
+            rightCollided = false;
+        }
+
 
     }
 }
