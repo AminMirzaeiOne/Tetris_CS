@@ -270,6 +270,33 @@ namespace Tetris
 
         }
 
+        // Button start stop clicked method
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            if (isGameOver)
+            {
+                tetrisGrid.Children.Clear();
+                nextShapeCanvas.Children.Clear();
+                GameOverTxt.Visibility = Visibility.Collapsed;
+                isGameOver = false;
+            }
+            if (!timer.IsEnabled)
+            {
+                if (!gameActive) { scoreTxt.Text = "0"; leftPos = 3; addShape(currentShapeNumber, leftPos); }
+                nextTxt.Visibility = levelTxt.Visibility = Visibility.Visible;
+                levelTxt.Text = "Level: " + gameLevel.ToString();
+                timer.Start();
+                startStopBtn.Content = "Stop Game";
+                gameActive = true;
+            }
+            else
+            {
+                timer.Stop();
+                startStopBtn.Content = "Start Game";
+            }
+        }
+
 
     }
 }
