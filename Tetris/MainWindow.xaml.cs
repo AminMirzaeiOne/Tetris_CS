@@ -633,6 +633,23 @@ namespace Tetris
             return rectangle;
         }
 
+        // Get the gradient color for basic square
+        private LinearGradientBrush getGradientColor(Color clr)
+        {
+            LinearGradientBrush gradientColor = new LinearGradientBrush();
+            gradientColor.StartPoint = new Point(0, 0);
+            gradientColor.EndPoint = new Point(1, 1.5);
+            GradientStop black = new GradientStop();
+            black.Color = Colors.Black;
+            black.Offset = -1.5;
+            gradientColor.GradientStops.Add(black);
+            GradientStop other = new GradientStop();
+            other.Color = clr;
+            other.Offset = 0.70;
+            gradientColor.GradientStops.Add(other);
+            return gradientColor;
+        }
+
 
     }
 }
