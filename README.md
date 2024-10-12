@@ -18,8 +18,8 @@ Simple Tetris game built in WPF<br />
 
 <h2> 💡 Program Help</h2>
 1 - Run the program first<br />
-2 - Access the main menu by right-clicking<br />
-3 - View the result
+2 - Click on the start button<br />
+3 - Control the game with the direction keys of the keyboard
 
 <h2>📷 Screenshots</h2>
 ![Screenshot 2024-09-20 102307](https://github.com/user-attachments/assets/110074a8-06e5-41cf-9632-b81831685be1)<br />
